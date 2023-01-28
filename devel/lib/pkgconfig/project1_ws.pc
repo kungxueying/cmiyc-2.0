@@ -1,0 +1,8 @@
+prefix=/home/s2149135/cmiyc_ws/devel
+
+Name: project1_ws
+Description: Description of project1_ws
+Version: 0.0.0
+Cflags: -I/home/s2149135/cmiyc_ws/src/project1_ws/include
+Libs: -L${prefix}/lib -lproject1_ws
+Requires: roscpp rospy std_msgs turtlesim
