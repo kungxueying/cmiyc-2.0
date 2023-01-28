@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "project1_ws")
 set(project1_ws_VERSION "0.0.0")
-set(project1_ws_MAINTAINER "jatinarora <jatinarora@todo.todo>")
+set(project1_ws_MAINTAINER "Xue Ying <s2149135@siswa.um.edu.my>")
 set(project1_ws_PACKAGE_FORMAT "2")
 set(project1_ws_BUILD_DEPENDS "roscpp" "rospy" "std_msgs" "turtlesim")
 set(project1_ws_BUILD_EXPORT_DEPENDS "roscpp" "rospy" "std_msgs" "turtlesim")

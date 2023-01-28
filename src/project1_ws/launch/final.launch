@@ -31,4 +31,8 @@
           name="listener4" />
     <node pkg="project1_ws" type="tf_listener5.py" 
           name="listener5" />
+
+    <node pkg="project1_ws" type="target2.py"
+          name="target2" />
+
   </launch>
