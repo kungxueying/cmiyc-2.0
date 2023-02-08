@@ -17,3 +17,9 @@ In our extended project, several changes have been made, including:
 7. Both targets do not have trails.
 8. The status of the turtles are being printed onto the console. For example, “Turtle 2 caught Turtle 1”.
 9. A few bugs in the original project are fixed. For example, rospy.signal_shutdown() needs to take one argument when it is being called. However, no argument is taken by rospy.signal_shutdown() functions in the original project, which causes error messages being printed on the console when a certain process is killed. This problem is fixed in our project.
+
+# Method to Launch
+After cloning this project to your local site, use the below command to launch the game:
+```
+roslaunch project1_ws final.launch
+```
