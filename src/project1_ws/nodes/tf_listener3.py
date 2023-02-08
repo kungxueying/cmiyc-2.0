@@ -34,7 +34,7 @@ if __name__ == '__main__':
             cmd.angular.z = angular
             turtle_vel.publish(cmd)
         else:
-            print("Game over")
-            rospy.signal_shutdown("Turtle 3 is dead")
+            rospy.loginfo("Turtle 3 caught Turtle 1")
+            rospy.signal_shutdown("Turtle 3 completed mission.")
 
         rate.sleep()

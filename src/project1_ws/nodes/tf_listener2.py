@@ -18,7 +18,7 @@ if __name__ == '__main__':
     spawner(1, 1, 0, 'turtle2')
    
    # velocity
-   turtle_vel = rospy.Publisher('turtle2/cmd_vel', geometry_msgs.msg.Twist,queue_size=1)
+    turtle_vel = rospy.Publisher('turtle2/cmd_vel', geometry_msgs.msg.Twist,queue_size=1)
 
     # set pen (change trail color to red)
     rospy.wait_for_service('turtle2/set_pen')
@@ -39,7 +39,7 @@ if __name__ == '__main__':
             cmd.angular.z = angular*8
             turtle_vel.publish(cmd)
         else:
-            print("Game over")
-            rospy.signal_shutdown("Turtle 2 is dead.")
+            rospy.loginfo("Turtle 2 caught Turtle 1")
+            rospy.signal_shutdown("Turtle 2 completed mission.")
 
         rate.sleep()
