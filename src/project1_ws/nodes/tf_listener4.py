@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
     rospy.wait_for_service('spawn')
     spawner = rospy.ServiceProxy('spawn', turtlesim.srv.Spawn)
-    spawner(6,6, 0, 'turtle4')
+    spawner(10, 1, 0, 'turtle4')
     turtle_vel = rospy.Publisher('turtle4/cmd_vel', geometry_msgs.msg.Twist,queue_size=1)
 
     rate = rospy.Rate(10.0)

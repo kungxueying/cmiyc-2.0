@@ -33,5 +33,7 @@
 
     <node pkg="project1_ws" type="target2.py"
           name="target2" />
+    <node pkg="project1_ws" type="target1_teleport.py"
+          name="target1" />
 
   </launch>
