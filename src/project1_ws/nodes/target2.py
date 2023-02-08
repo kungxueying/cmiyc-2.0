@@ -14,6 +14,11 @@ if __name__ == '__main__':
     spawner = rospy.ServiceProxy('spawn', turtlesim.srv.Spawn)
     spawner(5, 5, 0, 'turtle1b')
 
+    rospy.wait_for_service('turtle1b/set_pen')
+    setpen = rospy.ServiceProxy('turtle1b/set_pen', turtlesim.srv.SetPen)
+    setpen(0,0,0,0,1) #r g b width on/off
+
+
     while not rospy.is_shutdown():
         # teleport to a random position
         x = random.randrange(1,10)

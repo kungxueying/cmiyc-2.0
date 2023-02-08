@@ -9,6 +9,11 @@ import turtlesim.srv
 if __name__ == '__main__':
     rospy.init_node('target1_teleport')
 
+    rospy.wait_for_service('turtle1/set_pen')
+    setpen = rospy.ServiceProxy('turtle1/set_pen', turtlesim.srv.SetPen)
+    setpen(0,0,0,0,1) #r g b width on/off
+
+
     while not rospy.is_shutdown():
         # teleport to a random position
         x = random.randrange(1,10)
