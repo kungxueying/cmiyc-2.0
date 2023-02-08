@@ -1,39 +1,39 @@
   <launch>
     <node pkg="turtlesim" type="turtlesim_node" name="sim"/>
 
-    <node name="target1_tf_broadcaster" pkg="project1_ws" type="tf_broadcaster.py" respawn="false" output="screen" >
+    <node name="target1_tf_broadcaster" pkg="project1_ws" type="tf_broadcaster.py" respawn="false">
       <param name="turtle" type="string" value="turtle1" />
     </node>
-    <node name="target2_tf_broadcaster" pkg="project1_ws" type="tf_broadcaster.py" respawn="false" output="screen" >
+    <node name="target2_tf_broadcaster" pkg="project1_ws" type="tf_broadcaster.py" respawn="false">
       <param name="turtle" type="string" value="turtle1b" />
     </node>
 
 
-    <node name="turtle2_tf_broadcaster" pkg="project1_ws" type="tf_broadcaster.py" respawn="false" output="screen" >
+    <node name="turtle2_tf_broadcaster" pkg="project1_ws" type="tf_broadcaster.py" respawn="false">
       <param name="turtle" type="string" value="turtle2" /> 
     </node>
-    <node name="turtle3_tf_broadcaster" pkg="project1_ws" type="tf_broadcaster.py" respawn="false" output="screen" >
+    <node name="turtle3_tf_broadcaster" pkg="project1_ws" type="tf_broadcaster.py" respawn="false">
       <param name="turtle" type="string" value="turtle3" /> 
     </node
-    ><node name="turtle4_tf_broadcaster" pkg="project1_ws" type="tf_broadcaster.py" respawn="false" output="screen" >
+    ><node name="turtle4_tf_broadcaster" pkg="project1_ws" type="tf_broadcaster.py" respawn="false">
       <param name="turtle" type="string" value="turtle4" /> 
     </node>
-    <node name="turtle5_tf_broadcaster" pkg="project1_ws" type="tf_broadcaster.py" respawn="false" output="screen" >
+    <node name="turtle5_tf_broadcaster" pkg="project1_ws" type="tf_broadcaster.py" respawn="false">
       <param name="turtle" type="string" value="turtle5" /> 
     </node>
 
     <node pkg="project1_ws" type="tf_listener2.py" 
-          name="listener2" />
+          name="listener2" output="screen" />
     <node pkg="project1_ws" type="tf_listener3.py" 
-          name="listener3" />
+          name="listener3" output="screen"/>
     <node pkg="project1_ws" type="tf_listener4.py" 
-          name="listener4" />
+          name="listener4" output="screen"/>
     <node pkg="project1_ws" type="tf_listener5.py" 
-          name="listener5" />
+          name="listener5" output="screen"/>
 
     <node pkg="project1_ws" type="target2.py"
-          name="target2" />
+          name="target2" output="screen"/>
     <node pkg="project1_ws" type="target1_teleport.py"
-          name="target1" />
+          name="target1" output="screen"/>
 
   </launch>
