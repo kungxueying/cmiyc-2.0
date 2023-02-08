@@ -12,9 +12,12 @@ if __name__ == '__main__':
 
     listener = tf.TransformListener()
 
+    # spawn
     rospy.wait_for_service('spawn')
     spawner = rospy.ServiceProxy('spawn', turtlesim.srv.Spawn)
     spawner(10, 1, 0, 'turtle4')
+    
+    # velocity
     turtle_vel = rospy.Publisher('turtle4/cmd_vel', geometry_msgs.msg.Twist,queue_size=1)
 
     rate = rospy.Rate(10.0)

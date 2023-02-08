@@ -12,11 +12,15 @@ if __name__ == '__main__':
 
     listener = tf.TransformListener()
 
+    # spawn
     rospy.wait_for_service('spawn')
     spawner = rospy.ServiceProxy('spawn', turtlesim.srv.Spawn)
     spawner(10, 10, 0, 'turtle5')
+    
+    # velocity
     turtle_vel = rospy.Publisher('turtle5/cmd_vel', geometry_msgs.msg.Twist,queue_size=1)
 
+    # set pen (change trail color to green)
     rospy.wait_for_service('turtle5/set_pen')
     setpen = rospy.ServiceProxy('turtle5/set_pen', turtlesim.srv.SetPen)
     setpen(0,255,0,2,0) #r g b width on/off
